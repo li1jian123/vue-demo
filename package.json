@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/li1jian123/vue-demo/issues"
   },
-  "homepage": "https://github.com/li1jian123/vue-demo#readme"
+  "homepage": "https://github.com/li1jian123/vue-demo#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
