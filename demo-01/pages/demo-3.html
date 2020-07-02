@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-3</title>
+</head>
+<script src='../../node_modules/vue/dist/vue.js'></script>
+<body>
+    <div id="app">
+        html文本 :{{htmlContent}} <br>
+        html内容 :<span v-html="htmlContent"></span>
+        <input type="text" v-model="value">
+        <button @click="add">添加</button>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el :'#app',
+        data :{
+            htmlContent : "<span style='color:red'>121312312<\/span>",
+            value : 0
+        },
+        methods :{
+            add : function(){return this.value++}
+        }
+    })
+</script>
