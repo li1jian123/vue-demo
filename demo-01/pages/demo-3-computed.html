@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-3</title>
+</head>
+<script src='../../node_modules/vue/dist/vue.js'></script>
+<body>
+    <div id="app">
+        数学 ：<input type="number" v-model='Chine'>
+        英语 ：<input type="number" v-model='Engilsh'><br />
+        总得分(函数) ：<input type="number" v-model='sum()'>
+        <!-- 计算属性不需要括号 -->
+        总得分(计算属性) ：<input type="number" v-model='sum1'>
+
+
+    </div>
+</body>
+</html>
+<script>
+    var  vm = new Vue({
+        el :'#app',
+        data :{
+            Chine :0,
+            Engilsh :0
+        },
+        methods :{
+           sum : function(){
+                console.log("方法调用")
+               return (this.Chine-0)+ (this.Engilsh-0)
+           }
+        },
+
+        computed : {
+            sum1 : function(){
+                console.log("计算属性被调用")
+               return (this.Chine-0)+ (this.Engilsh-0)
+           }    
+        }
+    })
+</script>

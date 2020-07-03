@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src='../../node_modules/vue/dist/vue.js'></script>
+<style>
+    .size {width:300px;height:300px}
+    .fontStyle{font-size: 30px;}
+    .fontColore {color:red}
+    .fontBankgrondColor{background-color:green}
+</style>
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="isShow">显示（默认不显示）
+        <div :class="['size','fontBankgrondColor']" v-if="isShow">显示</div>
+        <div  v-else>不显示</div>
+        
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data :{
+            isShow:false
+        }
+    })
+</script>
+</html>
